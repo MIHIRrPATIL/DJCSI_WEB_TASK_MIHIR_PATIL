@@ -1,4 +1,4 @@
-.body,html{
+body,html{
     margin: 0;
     padding: 0;
     font-family: "Moderustic", sans-serif;
@@ -74,6 +74,13 @@
     color: rgba(85,85,85,255);
 }
 
+.icon {
+    display: none;
+}
+
+.active {
+    background-color:  rgb(216, 222, 232);
+}
 .register{
     margin: 2vh 2vw;
     background-color: rgba(103,173,90,255);
@@ -372,6 +379,7 @@
     flex: 1;
     margin: 0 2vw;
     padding: 0;
+    /* border: 1px solid white; */
 }
 
 .col1 {
@@ -434,10 +442,11 @@
 .col2 h3 {
     color: #fff;
     font-size: 2.5vh;
-    text-align: center;
+    text-align: left;
     align-items: left;
     margin: 1vh 1vw;
     font-weight: 500;
+    /* border: 1px solid green; */
     /* padding: 1vh 1vw; */
 }
 
@@ -459,6 +468,10 @@
     margin: 0;
 }
 
+.Darrow1, .Darrow2{
+    display: none;
+}
+
 /* .col3 {
     border: 1px solid white;
 } */
@@ -467,9 +480,10 @@
     color: #fff;
     font-size: 2.5vh;
     align-items: left;
-    text-align: center;
+    text-align: left;
     margin: 1vh 1vw;
     font-weight: 500;
+    /* border: 1px solid green; */
     /* padding: 1vh 1vw; */
 }
 
@@ -510,7 +524,7 @@
 
 .subscribe-container h2 {
     color: #fff;
-    margin-bottom: 25px;
+    margin-bottom: 15px;
     font-size: 2.5vh;
     font-weight: 500;
     text-align: left;
@@ -518,7 +532,7 @@
 
 .subscribe-form {
     display: flex;
-    background-color: rgb(63, 79, 88);
+    background-color: rgb(51, 64, 70);
     border-radius: 5px;
     overflow: hidden;
     margin-top: 1vh;
@@ -534,7 +548,7 @@
 }
 
 .subscribe-form input[type="email"]::placeholder {
-    color: rgb(211, 216, 220);
+    color: rgb(211, 216, 220);    
 }
 
 .subscribe-form button {
@@ -546,50 +560,218 @@
 }
 
 .subscribe-form button svg {
-    width: 2vw;
-    height: 2vh;
+    /* margin: 1vh 1vw; */
+    /* padding: 1vh 1vw; */
+    width: 5vw;
+    height: 3vh;
     fill: white;
 }
 
-  @media (max-width: 1080px) {
-        .container {
-            width: 100%;
-            border: 1px solid black;
-        }
-        .header {
-            flex-direction: column;
-            width: 100%;
-            padding: 0;
+@media (max-width: 1080px) {
 
-        }
+    .container {
+        box-sizing: border-box;
+        /* width: 120%; */
+        /* border: 1px solid black; */
+    }
 
-        .logo {
-            flex-basis: 100%;
-            /* border: 1px solid red; */
+    .options {
+        display: none;
         }
 
-        .logo img {
-            height: 7vh;
-        }
+    .logo {
+        flex: 1;
+        transform: scale(1.3);
+        margin-right: 30%;
+    }
 
-        .logo h3 {
-            font-size: 2.5em;
-            /* border: 1px solid green; */
-        }
+    .header {
+        margin: 0;
+        padding: 0;
+    }
 
-        .navbar {
-            flex-basis: 100%;
-            /* border: 1px solid green; */
-            
-        }
+    .icon {
+        display: block;
+        position: absolute;
+        top: 5vh;
+        right: 15vw;
+        transform: scale(1.5);
+        color: black;
+    }
 
-        .options {
-            flex-direction: column;
-        }
+    .navbar {
+        flex-direction: column;
+        justify-items: left;
+    }
 
-        .options ul {
-            display: none;
-            flex-direction: column;
-        }
-  }
-  
+    .options {
+        width: 100%;
+        margin-right: auto;
+        padding: 0;
+        background-color: rgb(224, 236, 224);
+        border-radius: 5px;
+    }
+
+    .options ul {
+        margin-right: auto;
+        padding: 0;
+        flex-direction: column;
+        /* border: 1px solid red; */
+    }
+
+    .options li {
+        width: 95%;
+        display: inline-block;
+        margin-right: auto;
+        border-radius: 5px;
+        /* border: 1px solid green; */
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        margin: 1vh 1vh;
+    }
+
+    .content {
+        margin: 2vh 2vw;
+        padding: 2vh 2vw;
+    }
+
+    .text h2 , .text h3{
+        font-size: 5vh;
+    }
+
+    .text p {
+        font-size: large;
+    }
+
+    .content-section-1 {
+        margin-top: 10vh;
+    }
+
+    .card {
+        margin: 1vh 1vw;
+    }
+
+    .text1 {
+        margin: 0;
+        /* border: 1px solid red; */
+    }
+
+    .text1 h3{
+        font-size: 3vh;
+    }
+
+    .card {
+        flex-direction: column;
+    }
+
+    .detail {
+        margin-top: 15vh;
+        flex-direction: column;
+        padding: 0;
+        width: 100%;
+        /* border: 1px solid black; */
+    }
+
+    .cntTxt2 {
+        padding: 0;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 10vh;
+    }
+
+    .cntTxt2 h3{
+        font-size: 1.3em;
+    }
+
+    .featured{
+        flex-direction: column;
+        gap: 12vh;
+    }
+
+    .cntrTxt1 , .cntrTxt2 , .cntrTxt3 {
+        transform: translate(00%,90%);
+        width: auto;
+    }
+
+    .cntrTxt1 h5, .cntrTxt2 h5, .cntrTxt3 h5{
+        font-size: 1em;
+        /* border: 1px solid black; */
+    }
+
+    .read p{
+        font-size: 1.2em;
+        margin: 10px 0 0 0;
+        /* border: 1px solid red; */
+    }
+    
+    .bottom {
+        flex-direction: column;
+        margin: 0 1vh;
+        padding: 3vh 3vw;
+        /* border: 1px solid green; */
+    }
+    
+    .company {
+        align-items: center;
+        justify-content: center;
+        /* border: 1px solid white; */
+    }
+    
+    .col1 p{
+        text-align: center;
+    }
+    
+    .socials {
+        padding: 0 15vw;
+        justify-content: space-between;
+        margin: 2vh 2vw;
+    }
+    
+    .socials img {
+        width: 3.5vh;
+    }
+    
+    .socials img :hover {
+    transform: scale(2);
+    }
+
+    .col2 , .col3 {
+        /* border: 1px solid rgb(140, 159, 141); */
+        margin: 2vh 0;
+        padding: 2vh 0;
+        background-color: rgb(51, 64, 70);
+    }
+    .col2 h3 , .col3 h3 {
+        text-align: left;
+        display: inline;
+        margin: 2vh 2vw;
+        padding: 2vh 0vw;
+    }
+
+    .col2:click , .col3:click {
+        transition: all 0.7s;
+    }
+
+    .Darrow1 ,.Darrow2{
+        display: inline;
+        position: absolute;
+        right: 10%;
+        transform: scale(1.5);
+    }
+    
+    .down1,.down2 {
+        display: none;
+    }
+
+    .col2 li , .col3 li {
+        margin: 1vh 1vw;
+        padding: 1vh 1vw;
+    }
+
+    .col2 a , .col3 a {
+        color: rgb(211, 216, 220);
+    }
+}
