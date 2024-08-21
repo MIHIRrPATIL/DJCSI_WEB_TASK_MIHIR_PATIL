@@ -167,5 +167,35 @@
     </div>
 
     <script>
-        function myfunction() {
-            var x = document.getElementsBy
+            function myfunction() {
+                var x = document.getElementsByClassName("options")[0];
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } 
+                else {
+                    x.style.display = "block";
+                }
+            }
+
+            function dropdown1 () {
+                var x = document.getElementsByClassName("down1")[0];
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+                else {
+                    x.style.display = "block";
+                }
+            }
+
+            function dropdown2 () {
+                var x = document.getElementsByClassName("down2")[0];
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                }
+                else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+    </html>
